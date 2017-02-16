@@ -1,0 +1,21 @@
+<table>
+  <tr valign="top">
+    <td>
+      <div class="map-area" #mapArea>[map]</div>
+    </td>
+    <td>
+      <div *ngIf="showA">A: {{aPosition}}</div>
+      <div *ngIf="showB">B: {{bPosition}}</div>
+      <p>
+        <label>Unit:</label>
+        <select [(ngModel)]="unit">
+          <option value="km">km</option>
+          <option value="miles">miles</option>
+        </select>
+      </p>
+      <p *ngIf="showDistance">
+        Distance: {{distance}}<br/>
+      </p>
+    </td>
+  </tr>
+</table>
